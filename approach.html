@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Approach — Sarah Hamdan</title>
+  <meta name="description" content="Sarah Hamdan's collaborative and iterative approach to web design and marketing for hospitality brands.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .approach-hero {
+      padding: 100px 0;
+      background: var(--main-bg);
+      min-height: 80vh;
+    }
+    
+    .approach-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .approach-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .approach-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .approach-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 40px;
+      color: var(--text);
+    }
+    
+    .approach-section {
+      margin-bottom: 32px;
+    }
+    
+    .approach-section h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+    
+    .approach-section p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">Sarah</a>
+      <nav class="nav">
+        <a href="/index.html#work">Projects</a>
+        <a class="button primary" href="mailto:sarahwbas@gmail.com">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="approach-hero">
+      <div class="approach-content">
+        <div class="approach-image">
+          <img src="/assets/images/MyApproach.png" alt="Desk setup with notebooks and workspace" />
+        </div>
+        <div class="approach-text">
+          <h1>My Approach</h1>
+          
+          <div class="approach-section">
+            <h3>Collaborative</h3>
+            <p>I immerse myself in your vision, working closely with you to understand your brand's unique story and goals. Through open communication and shared insights, we create digital experiences that not only meet but exceed your expectations.</p>
+          </div>
+          
+          <div class="approach-section">
+            <h3>Iterative</h3>
+            <p>My design process is built on continuous refinement and attention to detail. I believe in evolving ideas through thoughtful iteration, ensuring every element aligns perfectly with your creative vision and brand identity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sarah Hamdan</p>
+    </div>
+  </footer>
+  <script src="/scripts.js"></script>
+</body>
+</html>

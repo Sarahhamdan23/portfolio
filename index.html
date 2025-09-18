@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sarah Hamdan — Portfolio</title>
+  <meta name="description" content="Portfolio showcasing the Tabon Bakery restaurant website and marketing work by Sarah Hamdan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="https://www.sarah-hamdan.com" class="logo" target="_blank" rel="noopener" aria-label="LinkedIn">Sarah</a>
+      <nav class="nav">
+        <a href="#work">Projects</a>
+        <a href="/approach.html">Approach</a>
+        <a class="button secondary" href="mailto:sarahwbas@gmail.com">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Hey, I'm Sarah.</h1>
+            <p>I help restaurants and hospitality brands build meaningful digital experiences through strategic web design and marketing.</p>
+            <a class="button secondary" href="mailto:sarahwbas@gmail.com">Work with Me</a>
+          </div>
+          <div class="hero-image">
+            <img src="/assets/images/IMG_1683%202.png" alt="Sarah Hamdan" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <article class="project">
+          <div class="project-media">
+            <img src="/assets/images/TabonBakerySite.png" alt="Tabon Bakery website preview" />
+          </div>
+          <div class="project-content">
+            <h3>Tabon Bakery — Restaurant Website </h3>
+            <p>Designed and built a modern, mobile‑first website for a bakery restaurant, developed brand guidelines, and launched multi‑channel campaigns (social, SEO, email) that grew traffic and in‑store orders.</p>
+            <ul class="project-tags">
+              <li>Web Design</li>
+              <li>Branding</li>
+              <li>SEO</li>
+              <li>Social Media</li>
+              <li>Email Marketing</li>
+            </ul>
+            <div class="project-actions">
+              <a class="button primary" href="/tabon-bakery.html">View Case Study</a>
+              <a class="button" href="https://www.tabonbakery.com" target="_blank" rel="noopener" aria-label="LinkedIn">Live Website</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <img src="/assets/images/portfolio-screenshot.png" alt="Personal portfolio website preview" />
+          </div>
+          <div class="project-content">
+            <h3>Personal Portfolio — Sarah Hamdan</h3>
+            <p>A clean, modern portfolio website showcasing my design and development work. Built with a focus on user experience, responsive design, and performance optimization.</p>
+            <ul class="project-tags">
+              <li>Web Design</li>
+              <li>Development</li>
+              <li>UX/UI</li>
+              <li>Responsive</li>
+            </ul>
+            <div class="project-actions">
+              <a class="button primary" href="https://www.sarah-hamdan.com" target="_blank" rel="noopener" aria-label="LinkedIn">View Website</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <img src="/assets/images/SocialMediaGrowth.png" alt="Social media growth case study preview" class="lightbox-trigger" style="cursor: pointer;" data-src="/assets/images/SocialMediaGrowth.png" />
+          </div>
+          <div class="project-content">
+            <h3>Tabon Bakery — Social Media Growth</h3>
+            <p>Developed and executed a comprehensive social media strategy that achieved 1,300% follower growth, 534k TikTok views, and 89% increase in Google Maps searches through strategic content creation and influencer partnerships.</p>
+            <ul class="project-tags">
+              <li>Social Media</li>
+              <li>Content Strategy</li>
+              <li>Influencer Marketing</li>
+              <li>Growth Hacking</li>
+              <li>Analytics</li>
+            </ul>
+            <div class="project-actions">
+              <a class="button primary" href="/social-media-growth.html">View Case Study</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Sarah Hamdan</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Sarahhamdan23" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sarah-hamdan-86651417b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:sarahwbas@gmail.com">Email</a>
+      </div>
+    </footer>
+    <script src="/scripts.js"></script>
+
+</body>
+</html>
+
+  <!-- Simple Lightbox -->
+  <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="position: relative; max-width: 90%; max-height: 90%;">
+      <button onclick="closeLightbox()" style="position: absolute; top: -40px; right: 0; background: white; border: none; border-radius: 50%; width: 32px; height: 32px; font-size: 18px; cursor: pointer;">&times;</button>
+      <img id="lightbox-img" style="width: 100%; height: auto; border-radius: 8px;" src="" alt="" />
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(src, alt) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt;
+      document.getElementById('lightbox').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Add click events when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      var triggers = document.querySelectorAll('.lightbox-trigger');
+      for (var i = 0; i < triggers.length; i++) {
+        triggers[i].addEventListener('click', function(e) {
+          e.preventDefault();
+          var src = this.getAttribute('data-src') || this.src;
+          var alt = this.alt;
+          openLightbox(src, alt);
+        });
+      }
+
+      // Close when clicking outside
+      document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeLightbox();
+        }
+      });
+
+      // Close with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

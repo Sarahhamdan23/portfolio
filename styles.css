@@ -1,0 +1,689 @@
+/* Base */
+:root {
+  --header-bg: #f8f8f8;
+  --main-bg: #d8d0d8;
+  --surface: #ffffff;
+  --text: #333333;
+  --muted: #6a6a6a;
+  --primary: #d4a574;
+  --primary-light: #e8b8b8;
+  --accent: #f4e6d7;
+  --border: #6b4f4f;
+  --container: 1200px;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--header-bg);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* Header */
+.site-header {
+  background: var(--header-bg);
+  border-bottom: none;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.logo { 
+  color: var(--text); 
+  text-decoration: none; 
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+}
+
+.nav { 
+  display: flex; 
+  align-items: center; 
+  gap: 30px; 
+}
+
+.nav a { 
+  color: var(--text); 
+  text-decoration: none; 
+  font-weight: 400;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover { 
+  color: var(--primary); 
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  border: none;
+  color: var(--surface);
+  background: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.button:hover { 
+  transform: translateY(-1px); 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.button.primary { 
+  background: var(--text); 
+  color: var(--surface); 
+}
+
+.button.primary:hover { 
+  background: var(--primary); 
+}
+
+.button.secondary { 
+  background: var(--primary-light); 
+  color: var(--text); 
+  border: 2px solid var(--border);
+  height: auto;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 50px;
+}
+
+.button.secondary:hover { 
+  background: var(--primary); 
+  color: var(--surface);
+  border-color: var(--primary);
+}
+
+/* Hero Section - Flexbox Layout */
+.hero {
+  background: var(--main-bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 40px;
+  width: 100%;
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 68px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 30px;
+  color: var(--text);
+}
+
+.hero-text p {
+  font-size: 22px;
+  color: var(--text);
+  margin: 0 0 40px;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Projects */
+.projects {
+  padding: 80px 0;
+  background: var(--surface);
+}
+
+.projects h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 0 0 40px;
+  text-align: center;
+  color: var(--text);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  background: var(--header-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.project-media {
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.project-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 16px;
+  color: var(--text);
+}
+
+.project-content p {
+  color: var(--muted);
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.project-tags li {
+  padding: 4px 8px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+  transform: scale(0.7);
+  transform-origin: center;
+  font-weight: 400;
+}
+
+.project-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--header-bg);
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Responsive Design */
+
+
+@media (max-width: 600px) {
+    width: 100%;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  
+  .site-header .container {
+    height: 80px;
+  }
+  
+  .nav {
+    gap: 20px;
+  }
+  
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .site-header .container {
+    height: 80px;
+  }
+  
+  .nav {
+    gap: 20px;
+  }
+  
+
+
+
+
+
+
+.contact-button:hover {
+  background: var(--text);
+  color: var(--surface);
+}
+
+.section-contact-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .section-contact {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-contact-right {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  
+
+
+.linkedin-link:hover {
+  opacity: 0.7;
+}
+
+.linkedin-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+
+.linkedin-link:hover {
+  opacity: 0.7;
+}
+
+.linkedin-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Smaller button in header */
+.nav .button {
+  padding: 4px 8px;
+  font-size: 11px;
+  transform: scale(0.7);
+  transform-origin: center;
+}
+
+/* Lightbox Styles */
+.lightbox-trigger { cursor: pointer; transition: opacity 0.3s ease; }
+.lightbox-trigger:hover { opacity: 0.8; }
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lightbox-overlay.active { display: flex; }
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .lightbox-content { max-width: 95%; max-height: 80%; }
+  .lightbox-close { top: -35px; width: 28px; height: 28px; font-size: 16px; }
+}
+
+
+.linkedin-link:hover {
+  opacity: 0.7;
+}
+
+.linkedin-link img {
+  display: block;
+  border-radius: 4px;
+}
+
+
+
+.social-icon.linkedin img {
+  width: 28px !important;
+  height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+}
+
+
+.linkedin-link:hover {
+  opacity: 0.7;
+}
+
+.linkedin-link img {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+/* Smaller button in header */
+.nav .button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Wider LinkedIn icon */
+.linkedin-link img {
+  width: 28px !important;
+  height: 24px !important;
+  max-width: 28px !important;
+  max-height: 24px !important;
+}
+
+
+/* Make consultation button smaller */
+.nav .button.secondary {
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+/* Make LinkedIn icon much larger */
+.linkedin-link img {
+  width: 40px !important;
+  height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+}
+
+/* Add spacing between LinkedIn and button */
+.linkedin-link {
+  margin-right: 16px;
+}
+
+
+/* Ensure proper alignment in nav */
+.nav .linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+
+/* Override any inline styles */
+.linkedin-link img[style*="width"] {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+/* Footer Links Styling */
+.footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+/* Make Book Consultation button 50% smaller */
+.nav .button.secondary {
+  padding: 3px 6px;
+  font-size: 10px;
+  transform: scale(0.7);
+  transform-origin: center;
+}
+
+/* Make Book Consultation button much smaller */
+.nav .button.secondary {
+  padding: 2px 4px !important;
+  font-size: 8px !important;
+  transform: scale(0.5) !important;
+  transform-origin: center;
+  line-height: 1;
+}
+
+/* Make Book Consultation same size as Projects text */
+.nav .button.secondary {
+  padding: 0 !important;
+  font-size: inherit !important;
+  transform: none !important;
+  background: none !important;
+  border: none !important;
+  color: var(--text) !important;
+  text-decoration: none !important;
+  font-weight: normal !important;
+  line-height: normal !important;
+}
+
+/* Book Consultation button - black background, white text */
+.nav .button.secondary {
+  background: #000 !important;
+  color: #fff !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.nav .button.secondary:hover {
+  opacity: 0.8 !important;
+}
+
+/* Make Linktree image smaller */
+.case-visual img[src*="Linktree.png"] {
+  max-width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Align Linktree section text below the image */
+.case-visual img[src*="Linktree.png"] {
+  margin-bottom: 20px;
+}
+
+/* Make Linktree section stack vertically */
+.case-grid:has(img[src*="Linktree.png"]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case-grid:has(img[src*="Linktree.png"]) .case-text {
+  order: 2;
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Move Linktree paragraph down */
+.case-grid:has(img[src*="Linktree.png"]) .case-text {
+  order: 2;
+  text-align: center;
+  max-width: 80%;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+/* Move Linktree section much lower */
+.linktree-section {
+  margin-top: 60px;
+}
+
+/* Target the specific Linktree section */
+.case-grid:has(img[src*="Linktree.png"]) {
+  margin-top: 60px;
+  padding-top: 40px;
+}
+
+.case-grid:has(img[src*="Linktree.png"]) .case-text {
+  order: 2;
+  text-align: center;
+  max-width: 80%;
+  margin-top: 60px;
+  padding-top: 40px;
+}
+
+/* Add spacing between paragraphs in social media growth page */
+.case-text p {
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+/* Extra spacing for social media growth page specifically */
+.social-media-growth .case-text p {
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+}
+
+
+.nav-list li {
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  min-width: 180px;
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: var(--main-bg);
+  color: var(--text);
+}

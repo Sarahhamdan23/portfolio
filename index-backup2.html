@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sarah Hamdan — Portfolio</title>
+  <meta name="description" content="Portfolio showcasing the Tabon Bakery restaurant website and marketing work by Sarah Hamdan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="https://www.sarah-hamdan.com" class="logo" target="_blank" rel="noopener">Sarah</a>
+      <nav class="nav">
+        <a href="#work">Projects</a>
+        <a class="button secondary" href="mailto:sarahwbas@gmail.com">Book Consultation</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Hey, I'm Sarah.</h1>
+            <p>I help restaurants and hospitality brands build meaningful digital experiences through strategic web design and marketing.</p>
+            <a class="button secondary" href="mailto:sarahwbas@gmail.com">Work with Me</a>
+          </div>
+          <div class="hero-image">
+            <img src="/assets/images/IMG_1683%202.png" alt="Sarah Hamdan" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <article class="project">
+          <div class="project-media">
+            <img src="/assets/images/TabonBakerySite.png" alt="Tabon Bakery website preview" />
+          </div>
+          <div class="project-content">
+            <h3>Tabon Bakery — Restaurant Website </h3>
+            <p>Designed and built a modern, mobile‑first website for a bakery restaurant, developed brand guidelines, and launched multi‑channel campaigns (social, SEO, email) that grew traffic and in‑store orders.</p>
+            <ul class="project-tags">
+              <li>Web Design</li>
+              <li>Branding</li>
+              <li>SEO</li>
+              <li>Social Media</li>
+              <li>Email Marketing</li>
+            </ul>
+            <div class="project-actions">
+              <a class="button primary" href="/tabon-bakery.html">View Case Study</a>
+              <a class="button" href="https://www.tabonbakery.com" target="_blank" rel="noopener">Live Website</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <img src="/assets/images/portfolio-screenshot.png" alt="Personal portfolio website preview" />
+          </div>
+          <div class="project-content">
+            <h3>Personal Portfolio — Sarah Hamdan</h3>
+            <p>A clean, modern portfolio website showcasing my design and development work. Built with a focus on user experience, responsive design, and performance optimization.</p>
+            <ul class="project-tags">
+              <li>Web Design</li>
+              <li>Development</li>
+              <li>UX/UI</li>
+              <li>Responsive</li>
+            </ul>
+            <div class="project-actions">
+              <a class="button primary" href="https://www.sarah-hamdan.com" target="_blank" rel="noopener">View Website</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <img src="/assets/images/SocialMediaGrowth.png" alt="Social media growth case study preview" class="lightbox-trigger" data-src="/assets/images/SocialMediaGrowth.png" />
+          </div>
+          <div class="project-content">
+            <h3>Tabon Bakery — Social Media Growth</h3>
+            <p>Developed and executed a comprehensive social media strategy that achieved 1,300% follower growth, 534k TikTok views, and 89% increase in Google Maps searches through strategic content creation and influencer partnerships.</p>
+            <ul class="project-tags">
+              <li>Social Media</li>
+              <li>Content Strategy</li>
+              <li>Influencer Marketing</li>
+              <li>Growth Hacking</li>
+              <li>Analytics</li>
+            </ul>
+            <div class="project-actions">
+              <a class="button primary" href="/social-media-growth.html">View Case Study</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Sarah Hamdan</p>
+      </div>
+    </footer>
+    <script src="/scripts.js"></script>
+  </body>
+</html>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img id="lightbox-image" class="lightbox-image" src="" alt="" />
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(imageSrc, imageAlt) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+      lightboxImage.src = imageSrc;
+      lightboxImage.alt = imageAlt;
+      lightbox.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById("lightbox");
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const triggers = document.querySelectorAll(".lightbox-trigger");
+      triggers.forEach(trigger => {
+        trigger.addEventListener("click", function() {
+          const src = this.getAttribute("data-src") || this.src;
+          const alt = this.alt;
+          openLightbox(src, alt);
+        });
+      });
+
+      document.getElementById("lightbox").addEventListener("click", function(e) {
+        if (e.target === this) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

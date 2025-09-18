@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabon Bakery — Case Study</title>
+  <meta name="description" content="Case study: Tabon Bakery restaurant website and marketing by Sarah Hamdan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .case-hero { padding: 72px 0 24px; }
+    .case-hero h1 { margin: 0 0 10px; }
+    .case-hero p { color: var(--muted); max-width: 760px; }
+    .meta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+    .meta span { padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; background: #151824; color: var(--muted); font-size: 13px; }
+    .case-section { padding: 28px 0; }
+    .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .case-text h3 { margin: 0 0 16px; font-size: 24px; }
+    .case-text p { margin: 0 0 20px; color: var(--muted); line-height: 1.6; }
+    .case-visual img { width: 100%; height: auto; display: block; border-radius: 12px; }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .stat h3 { margin: 0; font-size: 28px; }
+    .stat p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+    .case-cta { padding: 36px 0 64px; }
+    
+    @media (max-width: 768px) {
+      .case-grid { grid-template-columns: 1fr; }
+      .case-visual { order: -1; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="https://www.sarah-hamdan.com" class="logo" target="_blank" rel="noopener">Sarah Hamdan</a>
+      <nav class="nav">
+        <a href="/index.html#work">Work</a>
+        <a href="/index.html#about">About</a>
+        <a href="/index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <h1>Tabon Bakery — Restaurant Website & Marketing</h1>
+        <p>From concept to launch: built a conversion‑focused website, defined the visual identity, and executed multi‑channel campaigns that increased traffic and sales.</p>
+        <div class="meta">
+          <span>Website</span>
+          <span>Branding</span>
+          <span>SEO</span>
+          <span>Social</span>
+          <span>Email</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <h2>Overview</h2>
+        <p>Tabon Bakery is a neighborhood bakery‑restaurant. The goal was to modernize their digital presence, make the menu easy to browse on mobile, and drive in‑store orders.</p>
+      </div>
+    </section>
+
+    <section class="case container">
+      <div class="case-grid">
+        <div class="case-text">
+          <h3>Website</h3>
+          <p>Designed a clean, appetizing interface highlighting hero items, menu sections, and hours/location with prominent CTAs. Built responsive pages with fast load times, SEO‑friendly markup, and analytics.</p>
+        </div>
+        <div class="case-visual">
+          <img src="/assets/images/TabonBakerySite.png" alt="Tabon Bakery website screens" />
+        </div>
+      </div>
+    </section>
+
+    <section class="case container">
+      <div class="case-grid">
+        <div class="case-visual">
+          <img src="/assets/images/tabon_menu_tv_full_no_stretch.png" alt="Branding moodboard and logo" />
+        </div>
+        <div class="case-text">
+          <h3>Branding</h3>
+          <p>I designed and developed the full restaurant menu from scratch, handling both the creative layout and the visual direction. I personally photographed all the dishes to highlight freshness and authenticity, then incorporated those images into a clean, modern menu design. The layout was structured for easy readability, aligning with the brand's identity while showcasing the food in a visually appealing and professional way.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case container">
+      <div class="case-grid">
+        <div class="case-text">
+          <h3>Campaigns</h3>
+          <p><strong>Tabon Bakery — Brand Identity & Marketing Assets</strong><br>Developed a complete brand identity system for Tabon Bakery, including logo design, storefront banner, menu layout, flyers, and business cards. Directed and executed food photography to showcase products, created a cohesive visual style across digital and print, and designed QR-integrated assets for social media engagement. Leveraged AI tools (MidJourney) to generate creative visuals and crafted marketing collateral that strengthened brand recognition and customer outreach.</p>
+        </div>
+        <div class="case-visual">
+          <img src="/assets/images/BrandIdenityBoard%202.png" alt="Campaign creative poster" />
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container case-grid">
+        <div class="stat">
+          <h3>+68%</h3>
+          <p>Website traffic in 3 months</p>
+        </div>
+        <div class="stat">
+          <h3>+41%</h3>
+          <p>Calls and direction requests</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-cta">
+      <div class="container">
+        <a class="button primary" href="mailto:sarahwbas@gmail.com">Work with me</a>
+        <a class="button" href="/index.html#work">Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sarah Hamdan</p>
+    </div>
+  </footer>
+  <script src="/scripts.js"></script>
+</body>
+</html>
