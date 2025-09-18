@@ -687,3 +687,315 @@ img { max-width: 100%; display: block; }
   background: var(--main-bg);
   color: var(--text);
 }
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  /* Header Mobile */
+  .site-header {
+    padding: 16px 0;
+  }
+  
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .nav a {
+    font-size: 14px;
+  }
+  
+  /* Hero Section Mobile */
+  .hero {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .hero-text h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  
+  .hero-text p {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .hero-image {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  
+  .hero-image img {
+    max-width: 280px;
+    height: auto;
+  }
+  
+  /* Projects Mobile */
+  .projects {
+    padding: 40px 20px;
+  }
+  
+  .project {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .project-media {
+    order: -1;
+    margin-bottom: 16px;
+  }
+  
+  .project-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .project-content {
+    width: 100%;
+  }
+  
+  .project-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .project-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .project-tags {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .project-tags li {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .project-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .project-actions .button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  /* Footer Mobile */
+  .site-footer {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .footer-links a {
+    font-size: 14px;
+  }
+  
+  /* Case Study Pages Mobile */
+  .case-hero {
+    padding: 40px 20px 20px;
+  }
+  
+  .case-hero h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  
+  .case-hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .meta span {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .case-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .case-visual {
+    order: -1;
+    margin-bottom: 16px;
+  }
+  
+  .case-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .case-text h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .case-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .stat {
+    padding: 12px;
+    margin: 16px 0;
+  }
+  
+  .stat h3 {
+    font-size: 24px;
+  }
+  
+  .stat p {
+    font-size: 12px;
+  }
+  
+  /* Lightbox Mobile */
+  .lightbox-overlay {
+    padding: 10px;
+  }
+  
+  .lightbox-content {
+    max-width: 95%;
+    max-height: 85%;
+  }
+  
+  .lightbox-close {
+    top: -30px;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+  
+  /* Button Mobile */
+  .button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .button.secondary {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+  
+  .hero-text p {
+    font-size: 14px;
+  }
+  
+  .project-content h3 {
+    font-size: 18px;
+  }
+  
+  .case-hero h1 {
+    font-size: 24px;
+  }
+  
+  .button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .nav {
+    gap: 8px;
+  }
+  
+  .nav a {
+    font-size: 13px;
+  }
+}
+
+/* Project Images Mobile Responsive */
+@media (max-width: 768px) {
+  .project-media {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .project-media img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  /* Ensure images don't overflow on mobile */
+  .project-media {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  /* Specific image optimizations */
+  .project-media img[src*="TabonBakerySite.png"],
+  .project-media img[src*="portfolio-screenshot.png"],
+  .project-media img[src*="SocialMediaGrowth.png"] {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Small mobile devices - further optimization */
+@media (max-width: 480px) {
+  .project-media img {
+    max-height: 250px;
+    border-radius: 6px;
+  }
+  
+  .project-media {
+    margin-bottom: 12px;
+  }
+}
+
+/* Ensure all project images are responsive */
+.project-media img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix any potential image overflow */
+.project-media {
+  position: relative;
+  overflow: hidden;
+}
